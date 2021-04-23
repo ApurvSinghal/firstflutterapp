@@ -2,18 +2,17 @@ import 'dart:convert';
 import 'package:firstflutterapp/src/buniness_logic/models/AuthenticationResponseModel.dart';
 import 'package:firstflutterapp/src/views/ui/ForgotPasswordPage.dart';
 import 'package:firstflutterapp/src/views/ui/HomePage.dart';
-import 'package:firstflutterapp/src/views/ui/SignUpPage.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'package:firstflutterapp/src/buniness_logic/models/AuthenticationModel.dart';
 
-class LoginPage extends StatelessWidget {
+class SignUpPage extends StatelessWidget {
   TextEditingController emailTextField = new TextEditingController();
   TextEditingController passwordTextField = new TextEditingController();
 
-  LoginPage() {
-    emailTextField.text = "hello@feathersjs.com";
-    passwordTextField.text = "supersecret";
+  SignUpPage() {
+    // emailTextField.text = "hello@feathersjs.com";
+    // passwordTextField.text = "supersecret";
   }
 
   @override
@@ -59,24 +58,6 @@ class LoginPage extends StatelessWidget {
                     border: OutlineInputBorder(),
                     labelText: 'Password',
                     hintText: 'Enter secure password'),
-              ),
-            ),
-            TextButton(
-              onPressed: () {
-                forgotPassword(context);
-              },
-              child: Text(
-                'Forgot Password',
-                style: TextStyle(color: Colors.blue, fontSize: 15),
-              ),
-            ),
-            TextButton(
-              onPressed: () {
-                signUp(context);
-              },
-              child: Text(
-                'SignUp',
-                style: TextStyle(color: Colors.blue, fontSize: 15),
               ),
             ),
             Container(
