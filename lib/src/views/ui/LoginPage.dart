@@ -142,14 +142,14 @@ class LoginPage extends StatelessWidget {
           content: SingleChildScrollView(
             child: ListBody(
               children: <Widget>[
-                Text('This is a demo alert dialog.'),
-                Text('Would you like to approve of this message?'),
+                Text('Alert!'),
+                Text('Unable to Login, Please try again!!!'),
               ],
             ),
           ),
           actions: <Widget>[
             TextButton(
-              child: Text('Approve'),
+              child: Text('Okay'),
               onPressed: () {
                 Navigator.of(context).pop();
               },
